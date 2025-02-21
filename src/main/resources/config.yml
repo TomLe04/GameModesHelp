@@ -1,0 +1,117 @@
+# Welcome to the GameModesHelp config.yml
+# You can edit values here for the plugin
+# This is a re-make plugin, add pages for each game modes
+# Re-make by Tom_Le
+
+######################################
+# Support
+######################################
+# Documentation: https://hcdocs.voidem.com/
+# Discord server: https://support.voidem.com/
+# Discord user: voidem
+# Spigot user: VoidemLIVE
+# GitHub repository: https://github.com/VoidemLIVE/Help-Command-Plugin
+
+######################################
+# Plugin Config
+######################################
+
+version: "1.0.0" # Plugin version, do not change
+updateCheck: true # Recommended to keep this value as true
+
+######################################
+# Help Command Configuration
+######################################
+gameModes:  # Define game modes that will have help commands
+  survival: "Survival Mode Help"
+  creative: "Creative Mode Help"
+  skyblock: "Skyblock Mode Help"
+
+help: # Help pages for different game modes
+  survival:
+    1:
+      - "&5----------"
+      - "&b&lServer&d&lName"
+      - "&bPage 1: Survival"
+      - "&5----------"
+      - "&b/warp &7&l- &r&dTeleport to predefined locations"
+      - "&b/home &7&l- &r&dTeleport to your set home location"
+      - "&b/tpa &7&l- &r&dRequest to teleport to another player"
+      - "&b/tpahere &7&l- &r&dRequest another player to teleport to you"
+      - "&5----------"
+    2:
+      - "&5----------"
+      - "&b&lServer&d&lName"
+      - "&bPage 2: Utility"
+      - "&5----------"
+      - "&b/heal &7&l- &r&dRestore your health"
+      - "&b/feed &7&l- &r&dSatisfy your hunger"
+      - "&b/repair &7&l- &r&dRepair your equipped items"
+      - "&b/vote &7&l- &r&dVote for the server"
+      - "&5----------"
+  creative:
+    1:
+      - "&5----------"
+      - "&b&lServer&d&lName"
+      - "&bPage 1: Creative"
+      - "&5----------"
+      - "&b/heal &7&l- &r&dRestore your health"
+      - "&b/feed &7&l- &r&dSatisfy your hunger"
+      - "&b/repair &7&l- &r&dRepair your equipped items"
+      - "&b/vote &7&l- &r&dVote for the server"
+      - "&5----------"
+    2:
+      - "&5----------"
+      - "&b&lServer&d&lName"
+      - "&bPage 2: Utility"
+      - "&5----------"
+      - "&b/heal &7&l- &r&dRestore your health"
+      - "&b/feed &7&l- &r&dSatisfy your hunger"
+      - "&b/repair &7&l- &r&dRepair your equipped items"
+      - "&b/vote &7&l- &r&dVote for the server"
+      - "&5----------"
+  skyblock:
+    1:
+      - "&5----------"
+      - "&b&lServer&d&lName"
+      - "&bPage 1: Skyblock"
+      - "&5----------"
+      - "&b/heal &7&l- &r&dRestore your health"
+      - "&b/feed &7&l- &r&dSatisfy your hunger"
+      - "&b/repair &7&l- &r&dRepair your equipped items"
+      - "&b/vote &7&l- &r&dVote for the server"
+      - "&5----------"
+    2:
+      - "&5----------"
+      - "&b&lServer&d&lName"
+      - "&bPage 2: Utility"
+      - "&5----------"
+      - "&b/heal &7&l- &r&dRestore your health"
+      - "&b/feed &7&l- &r&dSatisfy your hunger"
+      - "&b/repair &7&l- &r&dRepair your equipped items"
+      - "&b/vote &7&l- &r&dVote for the server"
+      - "&5----------"
+
+# The plugin now supports adding new pages dynamically.
+pagesEnabled: [1,2,3,4,5,6]  # Sets the pages that can be accessed
+
+######################################
+# Enabled Commands
+######################################
+helpcmd: true
+
+######################################
+# Language
+######################################
+
+reload: '&aLobbyHelpPlugin reloading' # Message for /help reload
+disabled: '&cThis command is disabled' # Message when a command is disabled
+noargument: '&cPlease use an argument' # Message when no arguments are provided
+playersOnly: 'Only players can use this command' # Message when a command is run from the console
+pageNA: '&cThis page does not exist!' # Message when a page doesn't exist
+
+pagePrompt:
+  enabled: true
+  page: '&6Page &e$[pageNum]'
+  arrowBack: '&a[<< &2$[prevNum]&a]'
+  arrowForward: '&a[&2$[nextNum]&a >>]'

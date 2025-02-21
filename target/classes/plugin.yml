@@ -1,0 +1,38 @@
+name: GameModesHelp
+version: 1.0
+main: net.toxictiger.gamemodeshelp.utils.GameModesHelp
+api-version: 1.19
+description: A plugin that provides interactive help commands with pagination for each game modes.
+authors: 
+   - Tom_Le
+commands:
+  help:
+    description: Displays help for different game modes.
+    usage: /help [gamemode|reload|ver]
+    permission: gamemodeshelp.use
+permissions:
+  gamemodeshelp.*:
+    description: Grants access to all GameModesHelp permissions.
+    default: true
+  gamemodeshelp.use:
+    description: Allows the use of /help command.
+    default: true
+  gamemodeshelp.help.*:
+    description: Allows access to all help sections.
+    default: true
+  # Allow only below game modes, you need to grant permissions on luckperms whether added more game modes
+  # gamemodeshelp.help.survival:
+    # description: Allows access to survival help section.
+    # default: true
+  # gamemodeshelp.help.creative:
+    # description: Allows access to creative help section.
+    # default: true
+  # gamemodeshelp.help.skyblock:
+    # description: Allows access to skyblock help section.
+    # default: true
+  gamemodeshelp.reload:
+    description: Allows players to reload the plugin configuration.
+    default: op
+  gamemodeshelp.manage:
+    description: Allows adding or removing game modes dynamically.
+    default: op  # ✅ Default granted to all players but modifiable in LuckPerms.
